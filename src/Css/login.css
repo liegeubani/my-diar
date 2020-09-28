@@ -4,12 +4,16 @@
     margin-top: 5% ;
     margin-left:15rem;
     max-width:  65%;
-    height: 30rem;
-    right: 40%;
+    /* height: 30rem; */
     font-size: 1.7rem;
     font-weight: 400;
 }
 
+.formHeader {
+    font-size:xx-large;
+    color:#14C9C9;
+    font-weight: 500;
+}
 .header-text {
     color:#14C9C9;
 }
@@ -48,22 +52,21 @@ input[type=submit] {
 }
 
 
-.forgotpassword  {
-    font-weight: 200;
-    font-size: small;
-    
-}
 .signup {
-    font-weight: 200;
-    font-size: small;
+  font-size: medium;
+  
 }
 
-span {
-    color:gray;
-    font-family: serif;
-}
+
 a {
-    color: rgb(7, 7, 170);
+    color: #14C9C9;
     text-decoration: none;
+    margin-left: 30px;
 }
 
+@media (max-width: 600px) {
+    .main-container{
+      width: auto;
+      margin-left: 100px ;
+    }
+  }
