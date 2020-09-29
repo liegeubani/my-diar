@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import '../Css/login.css'
 
 class Login extends React.Component {
@@ -26,15 +27,20 @@ class Login extends React.Component {
         return (
             <div className="main-container" >
                 <header className="formHeader">My Dairy</header>
-                <form onSubmit={this.onSubmit}>
+
+                <form className="formbody" onSubmit={this.onSubmit}>
                     <header className="header-text">Login</header>
-                    <input type="text" value={userName} onChange={this.handleUsername} placeholder='user-name' />
-                    <input type="password" value={userPassword} onChange={this.handleUserpassword} placeholder='password' />
-                    <input type="submit" value="Login" />
+                    <div className="loginform">
+                        <input type="text" value={userName} onChange={this.handleUsername} placeholder='user-name' required />
+                        <input type="password" value={userPassword} onChange={this.handleUserpassword} placeholder='password' required />
+                        <input type="submit" value="Login" />
+                        <div className="footer">
+                            <h5>
+                                Don`t have an account? <Link to="/sign-up" className="signuplink" > Signup </Link>
+                            </h5>
+                        </div>
+                    </div>
                 </form>
-                <div className="footer">
-                    <h5 className="signup">Don`t have an account?<a href="/">Sign Up</a></h5>
-                </div>
             </div>
         )
     };
