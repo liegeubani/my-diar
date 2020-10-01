@@ -1,11 +1,15 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import "./../Css/Home.css";
 
 class Home extends Component {
+
+
+
   render() {
     return (
       <div className="home-container">
-        <div class="topic">
+        <div className="topic">
           <h1 className="app-name">My Diary</h1>
           <p className="app-discription">Online Journal</p>
           <p className="record">
@@ -13,9 +17,9 @@ class Home extends Component {
           </p>
         </div>
         <div className="signinBtnWrapper">
-          <button className="home-button">Signin</button>
+        <Link to="/login"> <button className="home-button">Signin</button></Link>
           <p className="account">
-            Don't have an account? <span className="home-signup">Signup</span>
+            Don't have an account? <Link to="/signup" className="home-signup">Signup</Link>
           </p>
         </div>
       </div>
