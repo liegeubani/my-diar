@@ -68,3 +68,11 @@ input[type=submit] {
     margin-left: 8px;
 }
 
+/* Input validation */
+input.error { border: 1px solid red; }
+.errorMessage {
+    color: red;
+    font-size: 0.95em;
+    display: relative;
+}
+
