@@ -1,0 +1,57 @@
+
+
+.home-container{
+    background-color:#0E91A3;
+    color: whitesmoke;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.signinBtnWrapper{
+  margin-top: 30px;
+}
+
+.home-button{
+    background-color: rgb(55, 164, 197);
+    color: whitesmoke;
+    padding: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: none;
+    font-size: medium;
+    font-weight: 500;
+    
+}
+
+.home-signup{
+    color:rgb(247, 211, 122); ;
+}
+
+.app-name{
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.app-discription{
+     font-size: 42px;
+     margin-top:-30px;
+     font-family: 'Rowdies', cursive;
+
+}
+
+.record{
+    font-size: 22px;
+}
+
+.account{
+    font-size: 24px;
+}
+
+
+
+
+
+
