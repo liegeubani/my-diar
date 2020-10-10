@@ -103,13 +103,13 @@ class Login extends Component {
             )}
             <input type='submit' value='Login' />
             <div className='footer'>
-              <h5>
+              <small>
                 Don`t have an account?{' '}
                 <Link to='/sign-up' className='signuplink'>
                   {' '}
                   Signup{' '}
                 </Link>
-              </h5>
+              </small>
             </div>
           </div>
         </form>
