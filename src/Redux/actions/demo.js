@@ -1,15 +1,19 @@
 import { DEMO} from '../actionsType';
 
 
-const demoAction = {
-  type: DEMO,
-  payload: ['a','b']
-}
+// const demoAction = {
+//   type: DEMO,
+//   payload: ['a','b']
+// }
 
 
 
 const demo = () =>  (dispatch) => {
-  dispatch(demoAction)
+  
+  dispatch({
+    type: DEMO,
+    payload: ['a', 'b']
+  })
 };
 
 
