@@ -1,29 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { loginRequest } from './../Redux/actions/userLogin'
 import '../Css/login.css'
 
 class Login extends React.Component {
     state = {
-        userName: '',
-        userPassword: '',
-        user: []
-
+        username: '',
+        password: ''
     }
 
-    handleUsername = (e) => {
-        this.setState({ userName: e.target.value })
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
     }
 
-    handleUserpassword = (e) => {
-        this.setState({ userPassword: e.target.value })
-    }
     onSubmit = (e) => {
         e.preventDefault()
-        this.setState({ userUpdate: this.state.user })
+        const bodyData = this.state;
+        this.props.loginApi(bodyData)
+        this.setState({username:'', password:''})
     }
+
     render() {
-        const { userName, userPassword } = this.state
-        console.log(this.state)
+        const { username, password } = this.state
+       
         return (
             <div className="main-container" >
                 <header className="formHeader">My Dairy</header>
@@ -31,12 +31,29 @@ class Login extends React.Component {
                 <form className="formbody" onSubmit={this.onSubmit}>
                     <header className="header-text">Login</header>
                     <div className="loginform">
-                        <input type="text" value={userName} onChange={this.handleUsername} placeholder='user-name' required />
-                        <input type="password" value={userPassword} onChange={this.handleUserpassword} placeholder='password' required />
-                        <input type="submit" value="Login" />
+                        <input
+                            type="text"
+                            value={username}
+                            name="username"
+                            onChange={this.handleChange}
+                            placeholder='user-name'
+                            required />
+
+                        <input
+                            type="password"
+                            value={password}
+                            name="password"
+                            onChange={this.handleChange}
+                            placeholder='password'
+                            required />
+
+                        <input
+                            type="submit"
+                            value="Login"
+                        />
                         <div className="footer">
                             <h5>
-                                Don`t have an account? <Link to="/sign-up" className="signuplink" > Signup </Link>
+                                Don`t have an account? <Link to="/Signup" className="signuplink" > Signup </Link>
                             </h5>
                         </div>
                     </div>
@@ -46,4 +63,11 @@ class Login extends React.Component {
     };
 };
 
-export default Login;
+
+const mapDispatchToProps = dispatch => {
+    return {
+        loginApi: (data => dispatch(loginRequest(data)))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login);
