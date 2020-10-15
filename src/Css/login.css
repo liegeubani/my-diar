@@ -1,68 +1,64 @@
-
 .main-container {
-    width:  100vw;
-    height: 100vh;
-    background: #e5e5e536;
-    
+    width     : 100vw;
+    height    : 100vh;
+    background: #e5e5e5af;
+
 }
 
 .formbody {
-    width:  400px;
-    height: 65%;
-    margin: 16px  auto;
-    padding: 10px 50px ;  
-    margin-top: 6rem;
-    text-align: center;
-    flex-shrink: 3;
-    background:white;
+    width         : 400px;
+    height        : 54%;
+    margin        : 16px auto;
+    padding       : 10px 50px;
+    margin-top    : 6rem;
+    text-align    : center;
+    background    : white;
     flex-direction: column;
-} 
+}
 
 
 .loginform {
-   display:flex;
-   flex-direction: column;
+    display       : flex;
+    flex-direction: column;
 }
 
 .formHeader {
-    font-size:60px;
-    color:#14C9C9;
-    font-weight:bold;
-    text-align: center;
-}
-.header-text {
-    color:#14C9C9;
+    font-size  : 60px;
+    color      : #14C9C9;
+    font-weight: bold;
     text-align : center;
-    font-size: 40px;
-    padding: 20px;
+}
+
+.header-text {
+    color     : #14C9C9;
+    text-align: center;
+    font-size : 40px;
+    padding   : 20px;
 }
 
 
 
-input { 
-     border: 1px solid rgb(216, 212, 212);
-     padding: 16px 32px;
-     text-decoration: none;
-     height:26px;
-     margin: 4px 2px;
-     margin-top: 1rem;
+input {
+    border         : 1px solid rgb(216, 212, 212);
+    padding        : 16px 32px;
+    text-decoration: none;
+    height         : 26px;
+    margin         : 4px 2px;
+    margin-top     : 1rem;
 }
+
 input[type=submit] {
-    color: white;
-    background-color:#14C9C9;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-     height: 55px;
-    margin-top: 1.5rem;
+    color           : white;
+    background-color: #14C9C9;
+    padding         : 12px 20px;
+    border          : none;
+    border-radius   : 4px;
+    height          : 55px;
+    margin-top      : 1.5rem;
 }
-
-
-
 
 .signuplink {
-    color: #14C9C9;
+    color          : #14C9C9;
     text-decoration: none;
-    margin-left: 8px;
+    margin-left    : 8px;
 }
-
